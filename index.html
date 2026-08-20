@@ -1,12 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проект в разработке</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <style>html,body{margin:0;background:#fff;color-scheme:light}</style>
+  <title>Альфа Инвестиции — Главный экран</title>
+  <script src="scripts/navigation.js" data-route="home"></script>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="prefetch" href="dzyn.html">
+  <link rel="prefetch" href="mascot.html">
 </head>
 <body>
-    <h1>Сайт в разработке</h1>
-    <p>Скоро здесь появится проект.</p>
+  <div class="app">
+    <!-- Sticky product header; the operating system owns the status bar -->
+    <div class="app__chrome">
+      <header class="account-header">
+        <div class="account-button account-button--static">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 28 28">
+              <path d="M7.2 20.2 19.7 7.7M11.5 7.7h8.2v8.2"/>
+            </svg>
+          </span>
+          <span class="account-button__name">Руслан</span>
+        </div>
+        <button class="icon-button" type="button" aria-label="Уведомления">
+          <svg viewBox="0 0 28 28"><path d="M7.7 11.7a6.3 6.3 0 0 1 12.6 0c0 5.2 2.4 6.2 2.4 6.2H5.3s2.4-1 2.4-6.2Z"/><path d="M11.2 21.3a3.1 3.1 0 0 0 5.6 0"/></svg>
+          <span class="notification-dot"></span>
+        </button>
+      </header>
+    </div>
+
+    <main class="app__content page-content" aria-label="Главный экран Альфа Инвестиций">
+      <!-- Search -->
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="7.4"/><path d="m16.2 16.2 4.5 4.5"/></svg>
+        <input type="search" placeholder="Название, тикер, ISIN" aria-label="Поиск инструмента">
+      </label>
+
+      <!-- Portfolio -->
+      <section class="portfolio-card surface-card">
+        <div>
+          <p class="eyebrow">Баланс портфеля</p>
+          <p class="portfolio-card__value">0 ₽</p>
+          <p class="portfolio-card__delta">+0 ₽ (+0 %) за всё время</p>
+        </div>
+        <span class="chevron" aria-hidden="true"></span>
+      </section>
+
+      <!-- Native onboarding card with Dzyn -->
+      <section class="dzyn-intro-card" aria-labelledby="dzyn-intro-title">
+        <div class="dzyn-intro-card__copy">
+          <h2 id="dzyn-intro-title">Дзынь поможет освоиться</h2>
+          <p>Задавай вопросы, выполняй задание и открывай новые вещи для него.</p>
+        </div>
+        <img class="dzyn-intro-card__mascot" src="assets/mascot-base.png" alt="" aria-hidden="true">
+        <div class="dzyn-intro-card__actions">
+          <a class="primary-button primary-button--compact" href="dzyn.html">Задать вопрос</a>
+          <a class="secondary-button secondary-button--compact" href="mascot.html">Выполнить задание</a>
+        </div>
+      </section>
+
+      <article class="digital-card surface-card">
+        <div>
+          <h2>Цифровые<br>финансовые активы</h2>
+          <p>Инвестиции на блокчейне</p>
+        </div>
+        <svg class="digital-art" viewBox="0 0 100 100" role="img" aria-label="Цифровой актив с отметкой">
+          <defs>
+            <linearGradient id="digital-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d267ff"/><stop offset=".55" stop-color="#893bf1"/><stop offset="1" stop-color="#4b13be"/></linearGradient>
+            <linearGradient id="cube-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b4a5e7"/></linearGradient>
+          </defs>
+          <ellipse cx="51" cy="53" rx="45" ry="23" fill="none" stroke="#7d7e8d" stroke-width="2" transform="rotate(13 51 53)"/>
+          <rect x="25" y="10" width="54" height="76" rx="14" fill="url(#digital-fill)"/>
+          <path d="m38 47 12 12 21-27" fill="none" stroke="#00e761" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
+          <path d="m71 67 17-6 10 10-3 18-18 5-10-10Z" fill="url(#cube-fill)"/>
+          <path d="m71 67 7 11 20-7M78 78l-1 16" fill="none" stroke="#d6cff3" stroke-width="1.5"/>
+        </svg>
+      </article>
+
+      <!-- Popular instruments -->
+      <section class="home-section">
+        <h2 class="section-title">Популярно сегодня</h2>
+        <div class="horizontal-list" aria-label="Популярные инструменты">
+          <article class="stock-card">
+            <svg class="stock-logo" viewBox="0 0 48 48" role="img" aria-label="Сбербанк">
+              <defs><linearGradient id="sber-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#52bfe9"/><stop offset="1" stop-color="#a5df54"/></linearGradient></defs>
+              <rect width="48" height="48" rx="15" fill="url(#sber-fill)"/>
+              <path d="M36 14a16 16 0 0 0-24 1M9 19a16 16 0 0 0 27 15" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".95"/>
+              <path d="m16 24 6 6 12-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Сбербанк</h3>
+            <p>281,6 ₽</p>
+            <strong>+0%</strong>
+          </article>
+          <article class="stock-card">
+            <svg class="stock-logo" viewBox="0 0 48 48" role="img" aria-label="Газпром">
+              <rect width="48" height="48" rx="15" fill="#2f7fc2"/>
+              <path d="M25 8c4 8-1 10 1 16 2-3 5-4 5-8 5 6 6 12 2 17-3 4-8 6-13 4-6-2-9-9-5-15 2-3 5-5 7-8 1-2 2-4 3-6Z" fill="#fff"/>
+              <path d="M22 24h10v14H18V27h4v8h7v-8h-7Z" fill="#2f7fc2"/>
+            </svg>
+            <h3>Газпром</h3>
+            <p>165,31 ₽</p>
+            <strong>+0%</strong>
+          </article>
+          <article class="stock-card">
+            <svg class="stock-logo" viewBox="0 0 48 48" role="img" aria-label="ГМК НорНикель">
+              <rect width="48" height="48" rx="15" fill="#2855a2"/>
+              <path d="M11 31V17l13 14V17M37 17v14L24 17v14" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="24" r="15" fill="none" stroke="#fff" stroke-width="1.7" opacity=".9"/>
+            </svg>
+            <h3>ГМКНорНи</h3>
+            <p>17 168 ₽</p>
+            <strong>+0%</strong>
+          </article>
+        </div>
+      </section>
+
+      <!-- Investor calendar -->
+      <section class="home-section calendar-section">
+        <h2 class="section-title">Календарь инвестора</h2>
+        <article class="calendar-card surface-card">
+          <h3>Ближайшие события<br>компаний</h3>
+          <svg class="calendar-art" viewBox="0 0 140 112" role="img" aria-label="Календарь и проценты">
+            <defs>
+              <linearGradient id="day-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6f5f6"/><stop offset="1" stop-color="#89b7c7"/></linearGradient>
+              <linearGradient id="day-red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ef6559"/><stop offset="1" stop-color="#bd302c"/></linearGradient>
+              <linearGradient id="day-purple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b483ff"/><stop offset="1" stop-color="#6232be"/></linearGradient>
+            </defs>
+            <text x="75" y="72" fill="#d93226" font-size="72" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, sans-serif">%</text>
+            <rect x="18" y="12" width="60" height="58" rx="8" fill="url(#day-blue)"/>
+            <text x="30" y="38" fill="#111" font-size="17" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, sans-serif">ВС</text>
+            <rect x="68" y="65" width="66" height="47" rx="7" fill="url(#day-red)"/>
+            <text x="82" y="94" fill="#6f1716" font-size="17" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, sans-serif">ПН</text>
+            <rect x="34" y="68" width="22" height="46" rx="4" fill="url(#day-purple)"/>
+            <path d="M48 69v43" stroke="#381d65" stroke-width="2" opacity=".45"/>
+          </svg>
+        </article>
+      </section>
+
+      <!-- Placements -->
+      <section class="home-section placements-section">
+        <div class="section-heading">
+          <h2 class="section-title">Размещения</h2>
+          <span class="chevron"></span>
+        </div>
+        <div class="horizontal-list placements-list">
+          <article class="placement-card placement-card--blue">
+            <h3>Anabar.AI Pre-IPO</h3>
+            <p>Pre-IPO, RUB</p>
+            <small>Участие от<br>6250 ₽</small>
+            <span class="placement-logo">A</span>
+          </article>
+          <article class="placement-card placement-card--slate">
+            <h3>Южуралзолото</h3>
+            <p>IPO, RUB</p>
+            <small>Участие от<br>6000 ₽</small>
+            <span class="placement-logo placement-logo--gold">▲</span>
+          </article>
+          <article class="placement-card placement-card--navy">
+            <h3>ЕвроТранс</h3>
+            <p>IPO, RUB</p>
+            <small>Участие от<br>250 ₽</small>
+            <span class="placement-logo">E</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Currency exchange -->
+      <section class="home-section currency-section">
+        <div class="section-heading">
+          <h2 class="section-title">Обмен валюты</h2>
+          <span class="chevron"></span>
+        </div>
+        <div class="currency-grid surface-card">
+          <div><b>$</b><span>Доллар</span><strong>92,41 ₽</strong></div>
+          <div><b>€</b><span>Евро</span><strong>100,12 ₽</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom tab bar -->
+    <nav class="tab-bar" aria-label="Основная навигация">
+      <span class="tab-bar__item is-active" aria-current="page">
+        <svg class="nav-icon nav-icon--tile" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="3" y="3" width="26" height="26" rx="1.5" fill="currentColor"/>
+          <path d="M7 22.5 13.2 15l4.1 4 7.8-9.3M20.7 9.7h4.4v4.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter"/>
+        </svg>
+        <span>Главный</span>
+      </span>
+      <span class="tab-bar__item" aria-disabled="true">
+        <svg class="nav-icon" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M10 8.2V6.5c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v1.7h3.2c1 0 1.8.8 1.8 1.8v15.2c0 1-.8 1.8-1.8 1.8H6.8c-1 0-1.8-.8-1.8-1.8V10c0-1 .8-1.8 1.8-1.8H10Zm3 0h6v-1h-6v1Zm1.2 8.1v2.1h3.6v-2.1h-3.6Z" fill="currentColor"/>
+        </svg>
+        <span>Портфель</span>
+      </span>
+      <span class="tab-bar__item" aria-disabled="true">
+        <svg class="nav-icon nav-icon--tile" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="3" y="3" width="26" height="26" rx="1.5" fill="currentColor"/>
+          <path d="M7 22.5 13.2 15l4.1 4 7.8-9.3M20.7 9.7h4.4v4.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter"/>
+        </svg>
+        <span>Рынки</span>
+      </span>
+      <span class="tab-bar__item" aria-disabled="true">
+        <svg class="nav-icon" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6.2 5h19.6C27 5 28 6 28 7.2v14.2c0 1.2-1 2.2-2.2 2.2H14l-7.7 4.2v-4.2h-.1C5 23.6 4 22.6 4 21.4V7.2C4 6 5 5 6.2 5Z" fill="currentColor"/>
+          <path d="M9.2 11.3h13.6M9.2 15.4h10.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Поддержка</span>
+      </span>
+      <span class="tab-bar__item" aria-disabled="true">
+        <svg class="nav-icon" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="10" r="6" fill="currentColor"/>
+          <path d="M5 28c.6-6.2 4.8-9.7 11-9.7S26.4 21.8 27 28H5Z" fill="currentColor"/>
+        </svg>
+        <span>Ещё</span>
+        <b class="badge">1</b>
+      </span>
+    </nav>
+  </div>
 </body>
 </html>

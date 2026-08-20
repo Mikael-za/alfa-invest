@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <style>html,body{margin:0;background:#fff;color-scheme:light}</style>
+  <title>Инвестиционный профиль</title>
+  <script src="scripts/navigation.js" data-route="profile"></script>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/investment-profile.css">
+</head>
+<body class="profile-page">
+  <!--
+    To POST the finished JSON to a backend, set data-submit-url to an endpoint.
+    data-success-url controls where the user goes after confirming the profile.
+  -->
+  <div class="app profile-app" id="investment-profile-app" data-submit-url="" data-success-url="index.html">
+    <header class="profile-header">
+      <button class="profile-header__back" type="button" aria-label="Назад" data-action="back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m15 5-7 7 7 7"/>
+        </svg>
+      </button>
+
+      <div class="profile-progress" aria-live="polite">
+        <span class="profile-progress__label">1 из 3</span>
+        <div class="profile-progress__track" role="progressbar" aria-label="Прогресс опроса" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+          <span class="profile-progress__value"></span>
+        </div>
+      </div>
+
+      <span class="profile-header__spacer" aria-hidden="true"></span>
+    </header>
+
+    <main class="profile-content" aria-live="polite">
+      <div id="questionnaire-screen"></div>
+    </main>
+
+    <footer class="profile-cta" id="questionnaire-cta">
+      <button class="primary-button" type="button" data-action="next" disabled>Далее</button>
+    </footer>
+  </div>
+
+  <script src="scripts/investment-profile.js"></script>
+</body>
+</html>

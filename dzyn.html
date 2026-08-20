@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <style>html,body{margin:0;background:#fff;color-scheme:light}</style>
+  <title>Дзынь — AI-помощник по инвестициям</title>
+  <script src="scripts/navigation.js" data-route="inner"></script>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/dzyn.css">
+</head>
+<body class="dzyn-page">
+  <div class="app dzyn-app" id="dzyn-app" data-chat-endpoint="https://alfa-dzyn-api-mikael-zas-projects.vercel.app/api/chat">
+    <header class="dzyn-header">
+      <a class="dzyn-back" href="index.html" data-back-home aria-label="Вернуться на главный экран">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+      </a>
+
+      <div class="dzyn-identity">
+        <img class="dzyn-avatar dzyn-avatar--header" src="assets/dzyn-mascot.png" alt="">
+        <div>
+          <h1>Дзынь</h1>
+          <p>AI-помощник по инвестициям</p>
+        </div>
+      </div>
+
+      <span class="dzyn-header__spacer" aria-hidden="true"></span>
+    </header>
+
+    <main class="dzyn-thread" id="dzyn-thread" aria-live="polite" aria-label="Разговор с Дзынем"></main>
+
+    <footer class="dzyn-composer">
+      <form class="composer-form" id="composer-form" novalidate>
+        <div class="composer-shell">
+          <label class="sr-only" for="chat-input">Спроси об инвестициях</label>
+          <textarea id="chat-input" rows="1" placeholder="Спроси об инвестициях" aria-describedby="composer-hint"></textarea>
+          <button class="composer-send" type="submit" aria-label="Отправить" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m0 0-5 5m5-5 5 5"/></svg>
+          </button>
+        </div>
+        <p class="composer-hint" id="composer-hint" role="status"></p>
+      </form>
+    </footer>
+  </div>
+
+  <script src="scripts/dzyn.js"></script>
+</body>
+</html>
