@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <style>html,body{margin:0;background:#fff;color-scheme:light}</style>
+  <title>Дзынь — задания и гардероб</title>
+  <script src="scripts/navigation.js" data-route="inner"></script>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/mascot.css">
+</head>
+<body class="mascot-page">
+  <div class="app mascot-app">
+    <header class="mascot-header">
+      <a class="back-button" href="index.html" data-back-home aria-label="Вернуться на главный экран">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+      </a>
+      <h1>Дзынь</h1>
+      <span class="mascot-header__spacer" aria-hidden="true"></span>
+    </header>
+
+    <main>
+      <section class="mascot-hero" aria-label="Маскот Дзынь">
+        <div class="mascot-hero__halo" aria-hidden="true"></div>
+        <img
+          class="mascot-hero__image"
+          id="mascot-image"
+          src="assets/mascot-base.png"
+          alt="Маскот Дзынь без обуви"
+        >
+      </section>
+
+      <div class="mascot-tabs" role="tablist" aria-label="Разделы маскота">
+        <button
+          class="mascot-tab is-active"
+          id="tasks-tab"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tasks-panel"
+          data-tab="tasks"
+        >Задания</button>
+        <button
+          class="mascot-tab"
+          id="wardrobe-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="wardrobe-panel"
+          data-tab="wardrobe"
+          tabindex="-1"
+        >Гардероб</button>
+      </div>
+
+      <div class="mascot-content">
+        <section class="tab-panel" id="tasks-panel" role="tabpanel" aria-labelledby="tasks-tab">
+          <div class="section-intro">
+            <div>
+              <p class="section-intro__eyebrow">Награды</p>
+              <h2>Выполняй задания</h2>
+            </div>
+            <span class="progress-pill" aria-label="Доступно одно из семи заданий">1 из 7</span>
+          </div>
+
+          <div class="task-list">
+            <article class="task-card task-card--available">
+              <div class="task-card__icon task-card__icon--learning" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12.5V17c2.9 2.2 7.1 2.2 10 0v-4.5M21 9v6"/></svg>
+              </div>
+              <div class="task-card__copy">
+                <span class="task-card__status">Доступно</span>
+                <h3>Пройти обучение</h3>
+                <p>Познакомься с основами инвестиций</p>
+              </div>
+              <div class="task-card__reward" aria-label="Награда: корона">
+                <img src="assets/mascot-previews/hat-1.png" alt="">
+              </div>
+              <span class="task-card__chevron" aria-hidden="true"></span>
+            </article>
+
+            <article class="task-card is-locked" aria-label="Задание закрыто">
+              <div class="task-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 17.5 8.5 13l3 3L19 8.5"/><path d="M14.5 8.5H19V13"/></svg>
+              </div>
+              <div class="task-card__copy"><h3>Сделать оборот больше <span class="task-amount">1&nbsp;000&nbsp;₽</span></h3><p>Откроется после обучения</p></div>
+              <div class="task-card__reward"><img class="asset--black-suit" src="assets/mascot-previews/suit-1.png" alt=""></div>
+              <span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+            </article>
+
+            <article class="task-card is-locked" aria-label="Задание закрыто">
+              <div class="task-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 17.5 8.5 13l3 3L19 8.5"/><path d="M14.5 8.5H19V13"/></svg>
+              </div>
+              <div class="task-card__copy"><h3>Сделать оборот больше <span class="task-amount">5&nbsp;000&nbsp;₽</span></h3><p>Откроется после обучения</p></div>
+              <div class="task-card__reward"><img src="assets/mascot-previews/suit-2.png" alt=""></div>
+              <span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+            </article>
+
+            <article class="task-card is-locked" aria-label="Задание закрыто">
+              <div class="task-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 17.5 8.5 13l3 3L19 8.5"/><path d="M14.5 8.5H19V13"/></svg>
+              </div>
+              <div class="task-card__copy"><h3>Сделать оборот больше <span class="task-amount">10&nbsp;000&nbsp;₽</span></h3><p>Откроется после обучения</p></div>
+              <div class="task-card__reward"><img src="assets/mascot-previews/suit-3.png" alt=""></div>
+              <span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+            </article>
+
+            <article class="task-card is-locked" aria-label="Задание закрыто">
+              <div class="task-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 4.5h10.5A1.5 1.5 0 0 1 18 6v13H7.5A1.5 1.5 0 0 1 6 17.5v-13Z"/><path d="M6 17.5A1.5 1.5 0 0 1 7.5 16H18M9 8h6"/></svg>
+              </div>
+              <div class="task-card__copy"><h3>Прочитать статью</h3><p>Откроется после обучения</p></div>
+              <div class="task-card__reward"><img src="assets/mascot-previews/hat-2.png" alt=""></div>
+              <span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+            </article>
+
+            <article class="task-card is-locked" aria-label="Задание закрыто">
+              <div class="task-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5c0 4.8 3.1 8 7.5 10 4.4-2 7.5-5.2 7.5-10V6L12 3Z"/><path d="m9.2 12 1.8 1.8 3.8-4"/></svg>
+              </div>
+              <div class="task-card__copy"><h3>Изучить материал по риску</h3><p>Откроется после обучения</p></div>
+              <div class="task-card__reward"><img src="assets/mascot-previews/hat-3.png" alt=""></div>
+              <span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+            </article>
+
+            <article class="task-card is-locked" aria-label="Задание закрыто">
+              <div class="task-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3V9Z"/></svg>
+              </div>
+              <div class="task-card__copy"><h3>Посмотреть обучающий материал</h3><p>Откроется после обучения</p></div>
+              <div class="task-card__reward"><span class="reward-gift" aria-hidden="true">?</span></div>
+              <span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="wardrobe-panel" role="tabpanel" aria-labelledby="wardrobe-tab" hidden>
+          <div class="section-intro">
+            <div>
+              <p class="section-intro__eyebrow">Коллекция</p>
+              <h2>Собери свой образ</h2>
+            </div>
+            <span class="progress-pill">3 предмета</span>
+          </div>
+          <section class="wardrobe-section" aria-labelledby="suit-heading">
+            <div class="wardrobe-section__heading">
+              <h3 id="suit-heading">Верх</h3>
+              <span>0 из 3</span>
+            </div>
+            <div class="wardrobe-grid">
+              <button class="wardrobe-card is-selected" type="button" data-category="suit" data-item="none" aria-pressed="true" aria-label="Без верхней одежды">
+                <span class="empty-item" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="9"/><path d="m8 20 12-12"/></svg></span>
+                <span class="selected-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="m3 6 2 2 4-4"/></svg></span>
+              </button>
+              <button class="wardrobe-card is-locked" type="button" disabled aria-label="Черный костюм, закрыто">
+                <img class="wardrobe-card__image asset--black-suit" src="assets/mascot-previews/suit-1.png" alt="">
+                <span class="wardrobe-lock" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+              </button>
+              <button class="wardrobe-card is-locked" type="button" disabled aria-label="Светлый костюм, закрыто">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/suit-2.png" alt="">
+                <span class="wardrobe-lock" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+              </button>
+              <button class="wardrobe-card is-locked" type="button" disabled aria-label="Красный костюм, закрыто">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/suit-3.png" alt="">
+                <span class="wardrobe-lock" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+              </button>
+            </div>
+          </section>
+
+          <section class="wardrobe-section" aria-labelledby="shoes-heading">
+            <div class="wardrobe-section__heading">
+              <h3 id="shoes-heading">Обувь</h3>
+              <span>3 из 3</span>
+            </div>
+            <div class="wardrobe-grid">
+              <button class="wardrobe-card is-selected" type="button" data-category="shoes" data-item="none" aria-pressed="true" aria-label="Без обуви">
+                <span class="empty-item" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="9"/><path d="m8 20 12-12"/></svg></span>
+                <span class="selected-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="m3 6 2 2 4-4"/></svg></span>
+              </button>
+              <button class="wardrobe-card" type="button" data-category="shoes" data-item="black" aria-pressed="false" aria-label="Черная обувь">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/shoes-black.png" alt="">
+                <span class="selected-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="m3 6 2 2 4-4"/></svg></span>
+              </button>
+              <button class="wardrobe-card" type="button" data-category="shoes" data-item="gold" aria-pressed="false" aria-label="Золотая обувь">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/shoes-gold.png" alt="">
+                <span class="selected-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="m3 6 2 2 4-4"/></svg></span>
+              </button>
+              <button class="wardrobe-card" type="button" data-category="shoes" data-item="white" aria-pressed="false" aria-label="Белая обувь">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/shoes-white.png" alt="">
+                <span class="selected-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="m3 6 2 2 4-4"/></svg></span>
+              </button>
+            </div>
+          </section>
+
+          <section class="wardrobe-section" aria-labelledby="hat-heading">
+            <div class="wardrobe-section__heading">
+              <h3 id="hat-heading">Головные уборы</h3>
+              <span>0 из 3</span>
+            </div>
+            <div class="wardrobe-grid">
+              <button class="wardrobe-card is-selected" type="button" data-category="hat" data-item="none" aria-pressed="true" aria-label="Без головного убора">
+                <span class="empty-item" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="9"/><path d="m8 20 12-12"/></svg></span>
+                <span class="selected-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="m3 6 2 2 4-4"/></svg></span>
+              </button>
+              <button class="wardrobe-card is-locked" type="button" disabled aria-label="Корона, закрыто">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/hat-1.png" alt="">
+                <span class="wardrobe-lock" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+              </button>
+              <button class="wardrobe-card is-locked" type="button" disabled aria-label="Головной убор, закрыто">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/hat-2.png" alt="">
+                <span class="wardrobe-lock" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+              </button>
+              <button class="wardrobe-card is-locked" type="button" disabled aria-label="Головной убор, закрыто">
+                <img class="wardrobe-card__image" src="assets/mascot-previews/hat-3.png" alt="">
+                <span class="wardrobe-lock" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 7V5a3 3 0 0 1 6 0v2"/><rect x="3.5" y="7" width="9" height="7" rx="2"/></svg></span>
+              </button>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="scripts/mascot.js"></script>
+</body>
+</html>
