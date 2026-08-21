@@ -241,7 +241,8 @@
     updateCta();
 
     if (options.scroll !== false) {
-      content.scrollTo({ top: 0, behavior: "auto" });
+      content.scrollTop = 0;
+      window.scrollTo({ top: 0, behavior: "auto" });
     }
   }
 
